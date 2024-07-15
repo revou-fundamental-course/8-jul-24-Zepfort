@@ -6,15 +6,31 @@
 }
 
 :root {
-    --color-button : #315093;
+    --color-button : #11bddb;
     --primary : #0e3a97;
     --color-text-primary : #242424;
-    --font-size : 2rem;
-    --form-color : #d7e3fd;
+    --font-size : 1.5rem;
+    --form-color : #ebf1fd;
 }
 
 body {
-    padding : 2rem 10%;
+    padding : 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.main-content {
+    border: 1px solid ;
+    flex: 1;
+    padding: 3%;
 }
 
 
@@ -27,17 +43,36 @@ header {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+ol {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+li {
+    font-size: 1.5rem;
+}
+
+section {
+    flex: 1;
 }
 
 p {
     font-family: "Outfit", sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-text-primary);
     padding: 1rem 0;
 
 }
-
 
 form {
     display: flex;
@@ -75,18 +110,26 @@ input {
     font-size: var(--font-size);
 }
 input[type="number"] {
-    flex-basis: 55%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
 }
 
 input[type="radio"] {
     margin-right: 5px;
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
 }
+
+input[type="number"]:focus {
+    border: 3px solid #555;
+  }
 
 .form-actions {
     display: flex;
@@ -122,13 +165,28 @@ button[type="reset"]:hover {
     background-color: #e0e0e0;
 }
 
-ol {
-    font-size: 2rem;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-bottom: 1rem;
+.form-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+    padding: 4% 4% 1% 4%;
+    margin : 2% 0;
+    background-color: var(--form-color);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
 }
 
-li {
+.form-result p {
     font-size: 2rem;
+}
+
+.form-result span {
+    font-size: 4rem;
+}
+
+.form-download  {
+    margin-top: 2rem;
+    
 }
