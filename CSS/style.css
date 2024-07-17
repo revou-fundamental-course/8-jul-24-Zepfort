@@ -14,12 +14,6 @@
     --form-color : #ebf1fd;
 }
 
-main {
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     main {
@@ -27,11 +21,20 @@ main {
     }
 }
 
+/*main */
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+
 .main-content {
     flex: 1;
     padding: 3%;
 }
 
+/* header */
 
 header {
     display: flex;
@@ -45,6 +48,8 @@ h1 {
     font-size: 4rem;
     font-weight: 600;
 }
+
+/* Keunggulan */
 
 h2 {
     font-size: 2rem;
@@ -66,7 +71,7 @@ li {
     color: var(--color-text-primary);
 }
 
-
+/* section */
 section {
     flex: 1;
 }
@@ -79,6 +84,7 @@ p {
 
 }
 
+/* Bagian Form */
 form {
     display: flex;
     flex-direction: column;
@@ -143,6 +149,8 @@ input[type="number"]:focus {
     gap: 1rem;
 }
 
+/* Bagian Button */
+
 button {
     padding: 10px 15px;
     border: none;
@@ -169,6 +177,8 @@ button[type="reset"] {
 button[type="reset"]:hover {
     background-color: #e0e0e0;
 }
+
+/* Bagian form hasil */
 
 .form-result {
     display: flex;
@@ -211,6 +221,7 @@ button[type="reset"]:hover {
     padding: 0;
 }
 
+/* Footer */
 footer {
     height: 200px;
     background-color: #353535;

@@ -1,5 +1,38 @@
+// Validasi input 
+function Validasi() {
+    const weightInput = document.querySelector('#weight');
+    const heightInput = document.querySelector('#height');
+    const ageInput = document.querySelector('#age');
+    let isValid = true;
+
+    if (!weightInput.value || isNaN(weightInput.value) || parseFloat(weightInput.value) <= 0) {
+        alert("Harus berupa angka positif dan tidak boleh kosong");
+        isValid = false;
+    }
+
+    if (!heightInput.value || isNaN(heightInput.value) || parseFloat(heightInput.value) <= 0) {
+        alert("Harus berupa angka positif dan tidak boleh kosong");
+        isValid = false;
+    }
+
+    if (!ageInput.value || isNaN(ageInput.value) || parseInt(ageInput.value) <= 0) {
+        alert("Harus berupa angka positif dan tidak boleh kosong");
+        isValid = false;
+    }
+
+    return isValid;
+}
+    
+
+// Fungsi Kalkulasi BMI
 function Kalkulasi(event) {
     event.preventDefault();
+    console.log('tessss')
+    
+    if (!Validasi()) {
+        return;
+    }
+    
 
     // Mendapatkan nilai dari Form
     const beratBadan = parseFloat(document.querySelector('#weight').value);
@@ -22,41 +55,41 @@ function Kalkulasi(event) {
         keteranganBmi.innerHTML = "Anda memiliki berat badan kurang dari normal";
         penjelasan.innerHTML = "Hasil BMI diantara 17.0 - 18.4. Anda berada dalam kategori kekurangan berat badan.";
         solusi.innerHTML = "Solusi untuk kekurangan berat badan adalah dengan meningkatkan asupan kalori, protein, dan karbohidrat. Hindari mengonsumsi junk food dan minuman soda.";
-        penyakitUmum.innerHTML = "<li>Infertilitas</li> <li>Anemia</li> <li>Osteoporosis</li> <li>Sistem Imun Lemah</li>"
+        penyakitUmum.innerHTML = "<li>Infertilitas</li> <li>Anemia</li> <li>Osteoporosis</li> <li>Sistem Imun Lemah</li>";
     } else if (BMI >= 18.5 && BMI <= 22.9) {
         hasilBmi.innerHTML = "Normal";
         keteranganBmi.innerHTML = "Anda memiliki berat badan normal";
         penjelasan.innerHTML = "Hasil BMI di antara 18.5 sampai 22.9. Anda berada dalam kategori berat badan normal.";
         solusi.innerHTML = "Konsumsi makanan bergizi dan olahraga secara teratur untuk menjaga berat badan.";
-        kategoriBMI.innerHTML = "Jaga berat badan Anda agar terhindar dari berbagai penyakit"
+        kategoriBMI.innerHTML = "Jaga berat badan Anda agar terhindar dari berbagai penyakit";
     } else if (BMI >= 23 && BMI <= 24.9) {
-        hasilBmi.innerHTML = "Anda memiliki berat badan berlebih";
+        hasilBmi.innerHTML = "Berat badan berlebih";
         keteranganBmi.innerHTML = "Anda memiliki berat badan berlebih";
         penjelasan.innerHTML = "Hasil BMI di antara 23 sampai 24.9. Anda berada dalam kategori berat badan berlebih.";
         solusi.innerHTML = "Konsumsi makanan bergizi dan olahraga secara teratur untuk menurunkan berat badan Anda.";
-        kategoriBMI.innerHTML = "Berat badan berleboh dapat menyebabkan berbagai masalah penyakit"
-        penyakitUmum.innerHTML = "<li>Diabetes</li> <li>Hipertensi</li> <li>Sakit jantung</li> <li>Osteoathritis</li>"
+        kategoriBMI.innerHTML = "Berat badan berlebih dapat menyebabkan berbagai masalah penyakit";
+        penyakitUmum.innerHTML = "<li>Diabetes</li> <li>Hipertensi</li> <li>Sakit jantung</li> <li>Osteoathritis</li>";
     } else if (BMI >= 25 && BMI <= 29.9) {
         hasilBmi.innerHTML = "Obesitas I";
         keteranganBmi.innerHTML = "Anda memiliki berat badan obesitas I";
         penjelasan.innerHTML = "Hasil BMI lebih dari 25. Anda berada dalam kategori obesitas I.";
         solusi.innerHTML = "Solusi paling umum adalah dengan meningkatkan aktivitas fisik dan mengatur pola makan. Pilih makanan sehat dan hindari junk food serta minuman bersoda.";
-        kategoriBMI.innerHTML = "Obesitas dapat menyebabkan berbagai masalah penyakit"
-        penyakitUmum.innerHTML = "<li>Diabetes</li> <li>Hipertensi</li> <li>Sakit jantung</li> <li>Osteoathritis</li>"
+        kategoriBMI.innerHTML = "Obesitas dapat menyebabkan berbagai masalah penyakit";
+        penyakitUmum.innerHTML = "<li>Diabetes</li> <li>Hipertensi</li> <li>Sakit jantung</li> <li>Osteoathritis</li>";
     } else {
         hasilBmi.innerHTML = "Obesitas II";
         keteranganBmi.innerHTML = "Anda memiliki berat badan obesitas II";
         penjelasan.innerHTML = "Hasil BMI lebih dari 30. Anda berada dalam kategori obesitas.";
         solusi.innerHTML = "Segera konsultasikan dengan dokter atau ahli gizi untuk penanganan lebih lanjut.";
-        kategoriBMI.innerHTML = "Obesitas dapat menyebabkan berbagai masalah penyakit"
-        penyakitUmum.innerHTML = "<li>Diabetes</li> <li>Hipertensi</li> <li>Sakit jantung</li> <li>Osteoathritis</li>"
+        kategoriBMI.innerHTML = "Obesitas dapat menyebabkan berbagai masalah penyakit";
+        penyakitUmum.innerHTML = "<li>Diabetes</li> <li>Hipertensi</li> <li>Sakit jantung</li> <li>Osteoathritis</li>";
     }
 
     // Menampilkan hasil BMI
-    const formResult = document.querySelector('.form-general');
+    const formResult = document.querySelector('.form-result');
     formResult.classList.remove('hidden');
-
 }
 
 
-
+// Event listener untuk tombol submit
+document.getElementById('button-submit').addEventListener('click', Kalkulasi);
