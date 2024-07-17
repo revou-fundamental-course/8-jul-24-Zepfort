@@ -38,7 +38,7 @@ function Kalkulasi(event) {
         penyakitUmum.innerHTML = "<li>Diabetes</li> <li>Hipertensi</li> <li>Sakit jantung</li> <li>Osteoathritis</li>"
     } else if (BMI >= 25 && BMI <= 29.9) {
         hasilBmi.innerHTML = "Obesitas I";
-        keteranganBmi.innerHTML = "Anda memiliki berat badan oebsitas I";
+        keteranganBmi.innerHTML = "Anda memiliki berat badan obesitas I";
         penjelasan.innerHTML = "Hasil BMI lebih dari 25. Anda berada dalam kategori obesitas I.";
         solusi.innerHTML = "Solusi paling umum adalah dengan meningkatkan aktivitas fisik dan mengatur pola makan. Pilih makanan sehat dan hindari junk food serta minuman bersoda.";
         kategoriBMI.innerHTML = "Obesitas dapat menyebabkan berbagai masalah penyakit"
