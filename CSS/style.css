@@ -8,27 +8,18 @@
 :root {
     --color-button : #11bddb;
     --primary : #0e3a97;
-    --color-text-primary : #242424;
+    --color-text-primary : #3d3d3d;
     --font-size : 1.5rem;
     --form-color : #ebf1fd;
-}
-
-body {
-    padding : 1rem;
-}
-
-.hidden {
-    display: none;
 }
 
 main {
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .main-content {
-    border: 1px solid ;
     flex: 1;
     padding: 3%;
 }
@@ -49,8 +40,12 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    color: var(--color-text-primary);
 }
 
+.hidden {
+    display: none !important;
+}
 ol {
     font-size: 2rem;
     padding-top: 1rem;
@@ -60,7 +55,9 @@ ol {
 
 li {
     font-size: 1.5rem;
+    color: var(--color-text-primary);
 }
+
 
 section {
     flex: 1;
@@ -187,6 +184,21 @@ button[type="reset"]:hover {
 }
 
 .form-download  {
-    margin-top: 2rem;
-    
+    margin-top: 2rem;   
+}
+
+.form-general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 4% 4% 4% 4%;
+    margin : 2% 0;
+    background-color: var(--form-color);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+}
+#form-general  p {
+    padding: 0;
 }

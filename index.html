@@ -21,7 +21,7 @@
     <main id="kalkulator" class="konten__utama">
         <section class="main-content">
             <header class="main-tittle">
-                <h1>Hitung IMB mu sekarang!</h1>
+                <h1>Hitung BMI mu sekarang!</h1>
             </header>
 
             <!-- Main Article -->
@@ -93,42 +93,49 @@
 
             <!-- Form Result -->
             <section>
-                <div class="result hidden">
+                <div class="result ">
                     <section>
                         <div id="form-result" class="form-result">
-                            <p id="kategori-bmi">Berat Badan Lebih</p>
-                            <span id="nilai-bmi">24</span>
-                            <p id="keterangan-bmi">Anda memiliki berat badan berlebih</p>
+                            <p id="kategori-bmi">BMI Anda</p>
+                            <span id="nilai-bmi">00.00</span>
+                            <p id="keterangan-bmi"></p>
                             <div class="form-download">
                                 <button type="button">Download hasil BMI</button>
                             </div>
                         </div>
                     </section>
                     
-                    <!-- General Information -->
+                    <!-- Result Information -->
                     <article>
-                        <p id="penjelasan">Hasil BMI diantara 23 dan 25. Anda berada dalam kategori overweight atau berat badan berlebih</p>
-                        <p id="solusi">Cara terbaik untuk menurunkan berat badan berlebih adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.
-                        Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal</p>
+                        <p id="penjelasan"></p>
+                        <p id="solusi"></p>
                         <div class="form-lanjutan">
                             <button type="button">Konsultasi Ahli Gizi Via Aplikasi</button>
                             <button type="button">Registrasi Online Ahli Gizi</button>
                         </div>
                     </article>
-                </div>
 
-                
-                    <section>
-                        <div id="form-result-placeholder" class="form-result">
-                            <p></p>
-                            <span>Hasil BMI akan muncul di sini</span>
-                            <p></p>
-                            <div class="form-download">
-                                <button type="button">Download hasil BMI</button>
-                            </div>
-                        </div>
-                    </section>
-                
+                </div>
+                <!-- General Information -->
+                <article>
+                    <p>
+                        BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang.
+                        Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+                    </p>
+                </article>
+
+                <section id="diagnosis-penyakit" class=" form-general hidden " >
+                    <p id="penyakit-kategori">
+                    </p>
+                    <br>
+                    <p id="penyakit-umum"></p>
+                    <div class="form-actions">
+
+                        <button type="button">Konsultasi Via Aplikasi</button>
+                        <button type="button">Registrasi Online Sekarang</button>
+                    </div>
+                </section>
+                    
             </section>
         </section>
     </main>
