@@ -9,6 +9,7 @@
     --color-button : #11bddb;
     --primary : #0e3a97;
     --color-text-primary : #3d3d3d;
+    --color-text-footer : #eef3ff ;
     --font-size : 1.5rem;
     --form-color : #ebf1fd;
 }
@@ -201,4 +202,26 @@ button[type="reset"]:hover {
 }
 #form-general  p {
     padding: 0;
+}
+
+footer {
+    height: 250px;
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer.image {
+    display: flex;
+}
+
+footer p {
+    color: var(--color-text-footer);
+}
+
+.copyright-logo {
+    font-size: 1rem;
+    color :var(--color-text-footer);
 }
